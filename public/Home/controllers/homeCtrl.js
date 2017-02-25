@@ -49,7 +49,7 @@
                     var results = [];
                     results = data.data;
                     for(var i in results){
-                        if(results[i].user == "btholmes@iastate.edu"){
+                        if(results[i].user == vm.currentUser){
                             vm.profileImage = results[i].url;
                             vm.userObj = results[i];
                             break;
@@ -65,8 +65,10 @@
                 if(checkImage()){
                     $ionicLoadbar.show();
                     createID();
-                    $userService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic")
+                    $userService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic", vm.currentUser)
                         .then(function(data) {
+
+                            alert(JSON.stringify(data));
                             $ionicLoadbar.hide();
                             vm.profileImage = vm.uploadMe;
                             // alert("Posted Successfully");
