@@ -10,6 +10,7 @@
         var vm = this;
 
         vm.page = "Login Page Fuck the Police";
+        vm.fuck = "oh yeah";
 
 
 
