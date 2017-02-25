@@ -9,7 +9,7 @@
     function loginCtrl($scope){
         var vm = this;
 
-
+        vm.fuck = "oh yeah";
 
 
 
