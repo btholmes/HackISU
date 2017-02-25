@@ -40,6 +40,13 @@
                        alert("Email or Password are wrong");
                });
 
+//               var ref = firebase.database().ref();
+//               var authData = ref.getAuth();
+//
+//               if (authData) {
+//                 console.log("Authenticated user with uid:", authData.uid);
+//               }
+
         }
 
         function register() {
@@ -87,9 +94,7 @@
         }
 
         function signOut() {
-
               firebase.auth().signOut();
-
         }
 
     // Listen to auth state changes
