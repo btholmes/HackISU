@@ -35,6 +35,10 @@
     var rootRef = firebase.database().ref();
 
 
+	function signOut() {
+      <!--firebase.auth().signOut();-->
+      window.location.href = "http://localhost:63342/ProfilePHP/labusqueda/index.html?_ijt=fg4nc477bfkurvtfp2ug3oqb7e#/login"
+  }
   </script>
 
 
@@ -43,22 +47,24 @@
 
 <body style = "overflow: scroll" ng-app="myApp" >
 
-	<nav class="navbar navbar-default bottomNavBorder mainNavbar" role="navigation"> 
+	<nav class="navbar navbar-default bottomNavBorder mainNavbar" role="navigation">
 		<div class="container ">
-			<div class="navbar-header"> 
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>					
-				</button> 	
+					<span class="icon-bar"></span>
+				</button>
 				<a ui-sref="home" class="text-blue navbar-brand myName">Home</a>
 			</div>
-			 	<div class="navbar-collapse collapse"> 
-			 		<ul class="nav navbar-nav navbar-right navNames"> 
+			 	<div class="navbar-collapse collapse">
+			 		<ul class="nav navbar-nav navbar-right navNames">
 			 			<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="resources">Resources</a></li>
 						<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="map">Map</a></li>
+						<li><a data-toggle="collapse" data-target=".navbar-collapse" onclick="signOut()">logout</a></li>
 			 		</ul>
+
 			 	</div>
 		</div>
 	</nav>
@@ -82,7 +88,7 @@
 		crossorigin="anonymous"></script>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-	
+
 	<script
 		src="https://code.angularjs.org/1.4.7/angular-animate.js"></script>
 	<script
@@ -92,12 +98,12 @@
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk&libraries=places"></script>
 
-		
+
 <!-- 		<script  -->
 <!-- 		src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDCa1LUe1vOczX1hO_iGYgyo8p_jYuGOPU"></script> -->
-	
-	
-	
+
+
+
 	<script src="app.js"></script>
 	<script src="loadFactory/ionicLoadbar.js"></script>
 	<script src="Constants/constants.js"></script>
@@ -120,7 +126,7 @@
 	<script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
 	<!--END IONIC STUFF -->
 
-	
+
 
 </body>
 

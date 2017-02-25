@@ -24,6 +24,7 @@
         vm.uploadItem;
         vm.userObj = {};
 
+        vm.currentUser;
 
 
         function init(){
@@ -34,6 +35,8 @@
                 $('.mainNavbar').css("display", "block");
             }, 500);
 
+//            alert(firebase.auth().currentUser.email);
+            vm.currentUser = firebase.auth().currentUser.email;
             getUserInfo();
         }
 
