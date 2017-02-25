@@ -11,7 +11,7 @@
         sv.storeUser = storeUser;
         sv.getUserInfo = getUserInfo;
 
-        function storeUser(image, myCountry, myRegion, uniqueID, picType) {
+        function storeUser(image, myCountry, myRegion, uniqueID, picType, user) {
             return $http({
                 method: 'POST',
                 url: "../Php/store_user.php",
@@ -21,7 +21,8 @@
                     'country' : myCountry,
                     'region' : myRegion,
                     'id' : uniqueID,
-                    'type' : picType
+                    'type' : picType,
+                    'email' : user
                 }
             });
         }

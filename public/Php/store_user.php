@@ -19,6 +19,7 @@ $country = $post->country;
 $region = $post->region;
 $id = $post->id;
 $picType = $post->type;
+$email = $post->email;
 
 $profilePicUrl = "../ProfilePics" ."/$id.jpg";
 
@@ -45,7 +46,7 @@ if(!$fileContents){
 $userFile = "users.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $profilePicUrl, 'country' => $country, 'region' => $region, 'user' => "btholmes@iastate.edu", 'type' => $picType);
+$info = array('url' => $profilePicUrl, 'country' => $country, 'region' => $region, 'user' => $email, 'type' => $picType);
 
 $info = json_encode($info);
 
