@@ -10,7 +10,7 @@
         var vm = this;
         vm.init = init;
         vm.getResources = getResources;
-        vm.uploadItemImage = uploadItemImage;
+        vm.uploadResource = uploadResource;
         vm.createID = createID();
         vm.resources = [];
         vm.itemImage;
@@ -35,23 +35,37 @@
             vm.getResources();
         }
 
+        function getResources(){
 
-        function uploadItemImage() {
+            $ionicLoadbar.show();
+            $getResourcesService.getResources()
+                .then(function(data) {
+                    $ionicLoadbar.hide();
+                    vm.resources = data.data;
+
+                    // alert(JSON.stringify(vm.resources));
+                });
+
+        }
+
+        function uploadResource() {
 
             if(vm.uploadItem != undefined){
                 $ionicLoadbar.show();
                 createID();
-                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region,vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic")
+                // alert(vm.uploadItem + " "+  vm.country + " " + vm.region + " " + vm.itemName + " " + vm.itemDesc + " " + vm.uniqueID);
+                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region, vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic")
                     .then(function(data) {
                         $ionicLoadbar.hide();
-                        vm.itemImage = vm.uploadItem;
                         // alert("Posted Successfully");
-                        // alert(JSON.stringify(data));
-                        localStorage.setItem("newImage", 1);
-                        // vm.country = "";
-                        // vm.region = "";
-                        // vm.description = "";
+                        alert(JSON.stringify(data));
+                        // localStorage.setItem("newImage", 1);
+                        vm.country = "";
+                        vm.region = "";
+                        vm.itemName = "";
+                        vm.itemDesc = "";
                         vm.uploadItem = "";
+                        vm.itemImage = "";
                     });
             }
         }
@@ -70,18 +84,6 @@
             vm.uniqueID = components.join("");
         }
 
-        function getResources(){
-
-            $ionicLoadbar.show();
-            $getResourcesService.getResources()
-                .then(function(data) {
-                    $ionicLoadbar.hide();
-                    vm.resources = data.data;
-
-                    alert(JSON.stringify(vm.resources));
-                });
-
-        }
 
 
         vm.init();

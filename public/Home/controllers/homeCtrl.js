@@ -4,16 +4,15 @@
     angular.module("myApp" )
         .controller("homeCtrl",homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$timeout', 'ionicLoadbar', 'imageService'];
+    homeCtrl.$inject = ['$scope', '$timeout', 'ionicLoadbar', 'userService'];
 
-    function homeCtrl($scope, $timeout, $ionicLoadbar, $imageService){
+    function homeCtrl($scope, $timeout, $ionicLoadbar, $userService){
         var vm = this;
         vm.init = init;
         vm.upload = upload;
-        vm.uploadItemImage = uploadItemImage;
         vm.createID = createID;
         vm.checkImage = checkImage;
-        vm.getuserInfo = getUserInfo;
+        vm.getUserInfo = getUserInfo;
         vm.country;
         vm.region;
         vm.page = "Home Page";
@@ -23,8 +22,7 @@
 
         vm.itemImage;
         vm.uploadItem;
-        vm.itemName;
-        vm.itemDesc;
+        vm.userObj = {};
 
 
 
@@ -41,35 +39,30 @@
 
         function getUserInfo(){
 
+            $ionicLoadbar.show();
+            $userService.getUserInfo()
+                .then(function(data){
+                    $ionicLoadbar.hide();
+                    var results = [];
+                    results = data.data;
+                    for(var i in results){
+                        if(results[i].user == "btholmes@iastate.edu"){
+                            vm.profileImage = results[i].url;
+                            vm.userObj = results[i];
+                            break;
+                        }
+                    }
 
+                });
         }
 
-        function uploadItemImage() {
-
-            if(vm.uploadItem != undefined){
-                $ionicLoadbar.show();
-                createID();
-                $imageService.storeImage(vm.uploadItem, "Ames,IA", "Just Testing now", vm.uniqueID, "itemPic")
-                    .then(function(data) {
-                        $ionicLoadbar.hide();
-                        vm.itemImage = vm.uploadItem;
-                        // alert("Posted Successfully");
-                        // alert(JSON.stringify(data));
-                        localStorage.setItem("newImage", 1);
-                        // vm.country = "";
-                        // vm.region = "";
-                        // vm.description = "";
-                        vm.uploadItem = "";
-                    });
-            }
-        }
 
         function upload() {
             // if(checkCityState() && checkDescription()){
                 if(checkImage()){
                     $ionicLoadbar.show();
                     createID();
-                    $imageService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic")
+                    $userService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic")
                         .then(function(data) {
                             $ionicLoadbar.hide();
                             vm.profileImage = vm.uploadMe;

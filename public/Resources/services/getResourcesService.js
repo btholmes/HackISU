@@ -19,16 +19,16 @@
             });
         }
 
-        function storeItem(image, country, region, name, desc, uniqueID, picType) {
+        function storeItem(image, myCountry, myRegion, myName, desc, uniqueID, picType) {
             return $http({
                 method: 'POST',
                 url: "../Php/store_item.php",
                 // url: "./php/putImageInDirectory.php",
                 data: {
                     'item' : image,
-                    'country' : country,
-                    'region' : region,
-                    'name' : name,
+                    'country' : myCountry,
+                    'region' : myRegion,
+                    'name' : myName,
                     'description' : desc,
                     'id' : uniqueID,
                     'type' : picType

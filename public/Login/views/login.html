@@ -10,16 +10,28 @@
     <!--<template is="dom-bind" id="app">-->
       <!--<paper-material elevation="1" style="padding: 2rem;">-->
         <h2>Input your email and password. {{vm.page}}</h2>
-        <!--<paper-input ng-model="vm.Email" value="{{email::input}}" type="text"></paper-input>-->
-        <!--<paper-input ng-model="vm.Password" value="{{password::input}}" type="password"></paper-input>-->
-        <!--<paper-button ng-click="vm.signIn()">Sign In</paper-button>-->
-        <!--<paper-button ng-click="vm.register()">Register</paper-button>-->
-        <!--<paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>-->
-        <!--<paper-button ng-click="vm.signOut()">Sign out</paper-button>-->
-          <paper-input ng-model="vm.Email" type="text"></paper-input>
-            <br>
 
-          <paper-input ng-model="vm.Password" type="password"></paper-input>
+  <div class = "row form-group">
+      <div class="col-md-2">
+          <label for="email"><b>Email: </b></label>
+      </div>
+      <div class = "col-md-10">
+          <input placeholder = "name@domain.xyz" type="text" class="form-control" id="email" ng-model="vm.Email">
+      </div>
+  </div>
+  <br>
+  <div class = "row form-group">
+      <div class="col-md-2">
+          <label for="pass"><b>Email: </b></label>
+      </div>
+      <div class = "col-md-10">
+          <input placeholder = "*******" type="password" class="form-control" id="pass" ng-model="vm.Password">
+      </div>
+  </div>
+          <!--<input ng-model="vm.Email" type="text">-->
+            <!--<br>-->
+
+          <!--<input ng-model="vm.Password" type="password">-->
             <br>
           <paper-button ng-click="vm.signIn()">Sign In</paper-button>
           <paper-button ng-click="vm.register()">Register</paper-button>

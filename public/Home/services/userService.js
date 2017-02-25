@@ -1,14 +1,15 @@
 (function(){
     'use strict';
 
-    angular.module("myApp" ).service("imageService", imageService);
+    angular.module("myApp" ).service("userService", userService);
 
-    imageService.$inject = ['$http','CONSTANTS'];
+    userService.$inject = ['$http','CONSTANTS'];
 
-    function imageService($http, CONSTANTS) {
+    function userService($http, CONSTANTS) {
 
         var sv = this;
-        sv.storeImage = storeImage;
+        sv.storeUser = storeUser;
+        sv.getUserInfo = getUserInfo;
 
         function storeUser(image, myCountry, myRegion, uniqueID, picType) {
             return $http({
@@ -23,6 +24,15 @@
                     'type' : picType
                 }
             });
+        }
+
+        function getUserInfo(){
+            return $http({
+                method: 'GET',
+                url: "../Php/get_user.php"
+                // url: "./php/putImageInDirectory.php",
+            });
+
         }
 
 

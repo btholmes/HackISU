@@ -4,9 +4,9 @@
     angular.module("myApp" )
         .controller("loginCtrl",loginCtrl);
 
-    loginCtrl.$inject = ['$scope'];
+    loginCtrl.$inject = ['$scope', '$state'];
 
-    function loginCtrl($scope){
+    function loginCtrl($scope, $state){
         var vm = this;
         vm.signIn = signIn;
         vm.register = register;
@@ -19,9 +19,8 @@
         vm.User;
 
         function signIn(){
-        alert("in sign in");
-//             var email = app.email;
-//             var password = app.password;
+            var error = false;
+        // alert("in sign in" + vm.Email + " " + vm.Password);
               if (!vm.Email || !vm.Password) {
                 return console.log('email and password required');
               }
@@ -29,18 +28,22 @@
               firebase.auth().signInWithEmailAndPassword(vm.Email, vm.Password)
                 .catch(function(error) {
                   // Handle Errors here.
+                    error = true;
                   var errorCode = error.code;
                   var errorMessage = error.message;
                   console.log('signIn error', error);
                   // ...
                 });
+            if(!error){
+                $state.go("home");
+            }
+
 
         }
 
         function register() {
 
-//              var email = app.email;
-//              var password = app.password;
+            var error = false;
               if (!vm.Email || !vm.Password) {
                 return console.log('email and password required');
               }
@@ -50,11 +53,12 @@
                   console.log('register error', error);
                   if (error.code === 'auth/email-already-in-use') {
                     var credential = firebase.auth.EmailAuthProvider.credential(vm.Email, vm.Password);
-                    app.signInWithGoogle()
+                    signInWithGoogle()
                       .then(function() {
                         firebase.auth().currentUser.link(credential)
                           .then(function(user) {
                             console.log("Account linking success", user);
+                              $state.go("home");
                           }, function(error) {
                             console.log("Account linking error", error);
                           });
