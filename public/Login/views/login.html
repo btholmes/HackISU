@@ -1,43 +1,66 @@
   <!-- Install dependencies with Bower:
     bower install PolymerElements/paper-elements#^1.0.7 -->
-
-<!--<html>-->
-<!--<head>-->
-  <!--<title>Auth Example</title>-->
-
-
-  <!--<body>-->
-    <!--<template is="dom-bind" id="app">-->
-      <!--<paper-material elevation="1" style="padding: 2rem;">-->
-        <h2>Input your email and password. {{vm.page}}</h2>
+  <h1 style="text-align: center;" >La Busqueda</h1>
+  <br>
+  <h2>Input your email and password</h2>
 
   <div class = "row form-group">
       <div class="col-md-2">
           <label for="email"><b>Email: </b></label>
       </div>
-      <div class = "col-md-10">
+      <div class = "col-md-4">
           <input placeholder = "name@domain.xyz" type="text" class="form-control" id="email" ng-model="vm.Email">
       </div>
   </div>
-  <br>
   <div class = "row form-group">
       <div class="col-md-2">
-          <label for="pass"><b>Email: </b></label>
+          <label for="pass"><b>Password:</b></label>
       </div>
-      <div class = "col-md-10">
+      <div class = "col-md-4">
           <input placeholder = "*******" type="password" class="form-control" id="pass" ng-model="vm.Password">
       </div>
   </div>
-          <!--<input ng-model="vm.Email" type="text">-->
-            <!--<br>-->
+  <paper-button ng-click="vm.signIn()">Sign In</paper-button>
 
-          <!--<input ng-model="vm.Password" type="password">-->
-            <br>
-          <paper-button ng-click="vm.signIn()">Sign In</paper-button>
-          <paper-button ng-click="vm.register()">Register</paper-button>
-          <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>
-          <paper-button ng-click="vm.signOut()">Sign out</paper-button>
-      <!--</paper-material>-->
-    <!--</template>-->
+  <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>
+
+  <br>
+
+  <h2>Register</h2>
+
+  <div class = "row form-group">
+      <div class="col-md-2">
+          <label for="regEmail"><b>Email: </b></label>
+      </div>
+      <div class = "col-md-4">
+          <input placeholder = "name@domain.xyz" type="text" class="form-control" id="regEmail" ng-model="vm.regEmail">
+      </div>
+  </div>
+
+  <div class = "row form-group">
+      <div class="col-md-2">
+          <label for="regPassword"><b>Password: </b></label>
+      </div>
+      <div class = "col-md-4">
+          <input placeholder = "*******" type="password" class="form-control" id="regPassword" ng-model="vm.regPassword">
+      </div>
+      <!--<div class = "col-md-4">-->
+          <!--<input placeholder = "*******" type="password" class="form-control" id="regPassword2" ng-model="vm.regPassword2">-->
+      <!--</div><br>-->
+
+  </div>
+  <div class = "row form-group">
+      <div class="col-md-2">
+          <label for="regPassword2"><b>Repeat Password: </b></label>
+      </div>
+      <div class = "col-md-4">
+          <input placeholder = "*******" type="password" class="form-control" id="regPassword2" ng-model="vm.regPassword2">
+      </div>
 
 
+  </div>
+
+  <!-- <paper-button ng-click="vm.signIn()">Sign In</paper-button> -->
+  <paper-button ng-click="vm.register()">Register</paper-button>
+  <!-- <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button> -->
+  <paper-button ng-click="vm.signOut()">Sign out</paper-button>
