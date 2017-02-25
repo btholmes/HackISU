@@ -10,11 +10,13 @@
         var vm = this;
         vm.init = init;
         vm.page = "Home Page";
-
+        vm.profileImage = "";
+        vm.uploadMe = "";
 
 
 
         function init(){
+            vm.profileImage = "../images/gitHub.png"
             $('.mainNavbar').css("opacity", "1");
 
             $timeout(function(){
