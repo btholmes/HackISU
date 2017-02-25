@@ -60,6 +60,8 @@
                         // alert("Posted Successfully");
                         alert(JSON.stringify(data.data));
                         // localStorage.setItem("newImage", 1);
+                        var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"description":vm.itemDesc,"user":"btholmes@iastate.edu","name":vm.itemName,"type":"itemPic"};
+                        vm.resources.push(newObj);
                         vm.country = "";
                         vm.region = "";
                         vm.itemName = "";
