@@ -4,13 +4,15 @@
 	angular.module("myApp" )
 	.controller("mapCtrl",mapCtrl);  
 	
-	mapCtrl.$inject = ['Map', '$scope', '$timeout'];
+	mapCtrl.$inject = ['Map', '$scope', '$timeout', 'getResourcesService', 'ionicLoadbar'];
 	
-	function mapCtrl(Map, $scope, $timeout){
+	function mapCtrl(Map, $scope, $timeout, $getResourcesService, $ionicLoadbar){
 		var vm = this;
 		vm.init = init;
+		vm.getResources = getResources;
 	    vm.place = {};
-	    vm.search = search; 
+	    vm.search = search;
+		vm.searchSpecific = searchSpecific;
 	    vm.send = send; 
 	    vm.nearbyPlaces = nearbyPlaces; 
 	    vm.clearRoute = clearRoute; 
@@ -20,7 +22,8 @@
 	    vm.distance = distance; 
 	    vm.mark = mark;
 	    vm.unMark = unMark; 
-	    vm.index = 0; 
+	    vm.index = 0;
+		vm.resources = [];
 //	    var htmlElement = '<button ng-click="vm.goHere()" class="btn btn-success">Test</button>';
 //	    var compiled = $compile(htmlElement);
 
@@ -35,8 +38,22 @@
 				$('.mainNavbar').css("display", "block");
 			}, 500);
 
+			getResources();
+
 		}
 
+		function getResources(){
+
+			$ionicLoadbar.show();
+			$getResourcesService.getResources()
+				.then(function(data) {
+					$ionicLoadbar.hide();
+					vm.resources = data.data;
+
+					alert(JSON.stringify(vm.resources));
+				});
+
+		}
 
 	    $scope.service = Map; 
 	    
@@ -62,6 +79,28 @@
 	           
 	        );
 	    }
+
+	    function searchSpecific(place){
+			vm.apiError = false;
+			Map.search(place)
+				.then(
+					function(res) { // success
+						Map.addHomeMarker(res);
+						vm.place.name = res.name;
+						vm.place.lat = res.geometry.location.lat();
+						vm.place.lng = res.geometry.location.lng();
+
+						Map.lat = res.geometry.location.lat();
+						Map.lng = res.geometry.location.lng();
+
+					},
+					function(status) { // error
+						vm.apiError = true;
+						vm.apiStatus = status;
+					}
+
+				);
+		}
 	    
 	   function send() {
 	        alert(vm.place.name + ' : ' + vm.place.lat + ', ' + vm.place.lng);    

@@ -17,6 +17,7 @@
         vm.uploadItem;
         vm.region;
         vm.country;
+        vm.address;
         vm.itemName;
         vm.itemDesc;
 
@@ -54,13 +55,13 @@
                 $ionicLoadbar.show();
                 createID();
                 // alert(vm.uploadItem + " "+  vm.country + " " + vm.region + " " + vm.itemName + " " + vm.itemDesc + " " + vm.uniqueID);
-                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region, vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic")
+                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region, vm.address, vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic")
                     .then(function(data) {
                         $ionicLoadbar.hide();
                         // alert("Posted Successfully");
                         alert(JSON.stringify(data.data));
                         // localStorage.setItem("newImage", 1);
-                        var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"description":vm.itemDesc,"user":"btholmes@iastate.edu","name":vm.itemName,"type":"itemPic"};
+                        var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"address" : vm.address,"description":vm.itemDesc,"user":"btholmes@iastate.edu","name":vm.itemName,"type":"itemPic"};
                         vm.resources.push(newObj);
                         vm.country = "";
                         vm.region = "";

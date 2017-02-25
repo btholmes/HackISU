@@ -17,6 +17,7 @@ $post = json_decode($data);
 $image = $post->item;
 $country = $post->country;
 $region = $post->region;
+$address = $post->address;
 $name = $post->name;
 $desc = $post->description;
 $id = $post->id;
@@ -47,7 +48,7 @@ if(!$fileContents){
 $userFile = "items.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $fileURL, 'country' => $country, 'region' => $region, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
+$info = array('url' => $fileURL, 'country' => $country, 'region' => $region, 'address' => $address,  'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
 
 $info = json_encode($info);
 
