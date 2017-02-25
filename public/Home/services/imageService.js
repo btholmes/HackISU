@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    myApp.service("imageService", imageService);
+    angular.module("myApp" ).service("imageService", imageService);
 
     imageService.$inject = ['$http','CONSTANTS'];
 
@@ -10,16 +10,15 @@
         var sv = this;
         sv.storeImage = storeImage;
 
-        function storeImage(image, cityState, desc, d, uniqueID) {
+        function storeImage(image, name, desc, uniqueID) {
             return $http({
                 method: 'POST',
-                url: CONSTANTS.store_image_url,
+                url: "../Php/store_image.php",
                 // url: "./php/putImageInDirectory.php",
                 data: {
                     'item' : image,
-                    'city' : cityState,
+                    'name' : name,
                     'description' : desc,
-                    'date' : d,
                     'id' : uniqueID
                 }
             });

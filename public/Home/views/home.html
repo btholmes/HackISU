@@ -4,10 +4,19 @@
     <div class = "col-md-4">
         <img class = "profileImage" src ="{{vm.profileImage}}">
     </div>
-    <div class = "col-md-2">
+    <div class = "col-md-8">
+        <form method = "post">
+            <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Image</button>
 
-        <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Image</button>
+            <img class = "uploaded_image" src="{{vm.uploadMe}}" >
 
-        <img class = "uploaded_image" src="{{vm.uploadMe}}" >
+            <button type="submit" ng-click="vm.post()" class="imageButton button button-positive button-block">Post</button>
+        </form>
+    </div>
+</div>
+<div class = "row">
+    <div class="form-group col-md-12">
+        <label for="country">Country:</label>
+        <input type="text" class="form-control" id="country" ng-mode="vm.country">
     </div>
 </div>
