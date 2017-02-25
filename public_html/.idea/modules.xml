@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProfilePHP.iml" filepath="$PROJECT_DIR$/ProfilePHP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labusqueda.iml" filepath="$PROJECT_DIR$/labusqueda.iml" />
     </modules>
   </component>
 </project>
