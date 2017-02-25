@@ -9,14 +9,21 @@
     function homeCtrl($scope, $timeout, $ionicLoadbar, $imageService){
         var vm = this;
         vm.init = init;
-        vm.post = post;
+        vm.upload = upload;
+        vm.uploadItemImage = uploadItemImage;
         vm.createID = createID;
         vm.checkImage = checkImage;
         vm.country;
+        vm.region;
         vm.page = "Home Page";
         vm.profileImage = "";
         vm.uploadMe = "";
         vm.uniqueID;
+
+        vm.itemImage;
+        vm.uploadItem;
+        vm.itemName;
+        vm.itemDesc;
 
 
 
@@ -30,7 +37,27 @@
 
         }
 
-        function post() {
+        function uploadItemImage() {
+
+            if(vm.uploadItem != undefined){
+                $ionicLoadbar.show();
+                createID();
+                $imageService.storeImage(vm.uploadItem, "Ames,IA", "Just Testing now", vm.uniqueID)
+                    .then(function(data) {
+                        $ionicLoadbar.hide();
+                        vm.itemImage = vm.uploadItem;
+                        // alert("Posted Successfully");
+                        // alert(JSON.stringify(data));
+                        localStorage.setItem("newImage", 1);
+                        // vm.country = "";
+                        // vm.region = "";
+                        // vm.description = "";
+                        vm.uploadItem = "";
+                    });
+            }
+        }
+
+        function upload() {
             // if(checkCityState() && checkDescription()){
                 if(checkImage()){
                     $ionicLoadbar.show();
@@ -38,12 +65,14 @@
                     $imageService.storeImage(vm.uploadMe, "Ames,IA", "Just Testing now", vm.uniqueID)
                         .then(function(data) {
                             $ionicLoadbar.hide();
-                            alert("Posted Successfully");
-                            alert(JSON.stringify(data));
+                            vm.profileImage = vm.uploadMe;
+                            // alert("Posted Successfully");
+                            // alert(JSON.stringify(data));
                             localStorage.setItem("newImage", 1);
-                            // vm.cityState = "";
+                            // vm.country = "";
+                            // vm.region = "";
                             // vm.description = "";
-                            // vm.uploadMe = "";
+                            vm.uploadMe = "";
                         });
                 }else{
                     alert("Plase upload an image in .jpg .bmp or .png format");
