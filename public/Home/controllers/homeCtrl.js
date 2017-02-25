@@ -67,16 +67,9 @@
                     createID();
                     $userService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic", vm.currentUser)
                         .then(function(data) {
-
-                            alert(JSON.stringify(data));
                             $ionicLoadbar.hide();
                             vm.profileImage = vm.uploadMe;
-                            // alert("Posted Successfully");
-                            // alert(JSON.stringify(data));
                             localStorage.setItem("newImage", 1);
-                            // vm.country = "";
-                            // vm.region = "";
-                            // vm.description = "";
                             vm.uploadMe = "";
                         });
                 }else{
