@@ -8,7 +8,8 @@
 	
 	function Map($http, $q, CONSTANTS, $rootScope, $compile){
 		var sv = this; 
-		sv.init = init; 
+		sv.init = init;
+		sv.addPlace = addPlace;
 		sv.placeMarker = placeMarker; 
 		sv.search = search; 
 		sv.addHomeMarker = addHomeMarker; 
@@ -56,18 +57,43 @@
 			    center: {lat: -34.397, lng: 150.644},
 			    zoom: 6
 			});
-			sv.map.addListener('click', function(e) {
-				    placeMarker(e.latLng, sv.map);
-			});
+			// sv.map.addListener('click', function(e) {
+			// 	    placeMarker(e.latLng, sv.map);
+			// });
 	    	getHomeLocation(); 
 
 	    	sv.places = new google.maps.places.PlacesService(sv.map); 
 	    }
+
+	    function addPlace(place, resource, desc) {
+
+						var position = new google.maps.LatLng(
+							place.geometry.location.lat(),
+							place.geometry.location.lng());
+						var marker = new google.maps.Marker({
+							item: resource,
+							description : desc,
+							id: place.place_id,
+							name: place.name,
+							vicinity: place.vicinity,
+							position: position,
+							animation: google.maps.Animation.DROP,
+							mark: true
+						});
+						addMarked(marker);
+						var myLatLng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+						sv.bounds.extend(myLatLng);
+					sv.map.setCenter({lat: sv.lat, lng: sv.lng});
+					setBounds(sv.bounds);
+
+		}
+
+
 	    function placeMarker(latLng, map) {
-//	    	  var marker = new google.maps.Marker({
-//	    	    position: latLng,
-//	    	    map: map
-//	    	  });
+	    	  var marker = new google.maps.Marker({
+	    	    position: latLng,
+	    	    map: map
+	    	  });
 	    }
 	    
 	   function search(str) {

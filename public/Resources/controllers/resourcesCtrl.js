@@ -65,6 +65,7 @@
                         vm.resources.push(newObj);
                         vm.country = "";
                         vm.region = "";
+                        vm.address = "";
                         vm.itemName = "";
                         vm.itemDesc = "";
                         vm.uploadItem = "";

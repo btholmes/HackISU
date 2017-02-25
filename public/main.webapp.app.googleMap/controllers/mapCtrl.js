@@ -10,6 +10,7 @@
 		var vm = this;
 		vm.init = init;
 		vm.getResources = getResources;
+		vm.addResourceMarkers = addResourceMarkers;
 	    vm.place = {};
 	    vm.search = search;
 		vm.searchSpecific = searchSpecific;
@@ -50,9 +51,17 @@
 					$ionicLoadbar.hide();
 					vm.resources = data.data;
 
-					alert(JSON.stringify(vm.resources));
+					addResourceMarkers();
 				});
 
+		}
+
+		function addResourceMarkers() {
+			for(var i = 0; i < vm.resources.length; i++){
+				var location = vm.resources[i].country + ", " + vm.resources[i].region + ", " + vm.resources[i].address;
+				// alert(location);
+				searchSpecific(location, vm.resources[i].name, vm.resources[i].description);
+			}
 		}
 
 	    $scope.service = Map; 
@@ -80,18 +89,12 @@
 	        );
 	    }
 
-	    function searchSpecific(place){
+	    function searchSpecific(place, name, desc){
 			vm.apiError = false;
 			Map.search(place)
 				.then(
 					function(res) { // success
-						Map.addHomeMarker(res);
-						vm.place.name = res.name;
-						vm.place.lat = res.geometry.location.lat();
-						vm.place.lng = res.geometry.location.lng();
-
-						Map.lat = res.geometry.location.lat();
-						Map.lng = res.geometry.location.lng();
+						Map.addPlace(res, name, desc);
 
 					},
 					function(status) { // error
@@ -103,7 +106,7 @@
 		}
 	    
 	   function send() {
-	        alert(vm.place.name + ' : ' + vm.place.lat + ', ' + vm.place.lng);    
+	        // alert(vm.place.name + ' : ' + vm.place.lat + ', ' + vm.place.lng);
 	    }
 	   
 	   function nearbyPlaces(store, radius) {

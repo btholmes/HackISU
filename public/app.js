@@ -28,7 +28,7 @@ angular.module("myApp", ['ui.router', 'ngAnimate', 'ionic'])
 		.state('map', {
 			name: 'map', 
 			url: '/map', 
-			templateUrl: 'Map/views/map.html',
+			templateUrl: 'main.webapp.app.googleMap/views/map.html',
 			controller: 'mapCtrl',
 			controllerAs: 'vm'
 		});
