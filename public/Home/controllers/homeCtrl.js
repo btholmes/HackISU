@@ -13,6 +13,7 @@
         vm.uploadItemImage = uploadItemImage;
         vm.createID = createID;
         vm.checkImage = checkImage;
+        vm.getuserInfo = getUserInfo;
         vm.country;
         vm.region;
         vm.page = "Home Page";
@@ -28,12 +29,18 @@
 
 
         function init(){
-            vm.profileImage = "../images/gitHub.png"
+            // vm.profileImage = "../images/gitHub.png"
             $('.mainNavbar').css("opacity", "1");
 
             $timeout(function(){
                 $('.mainNavbar').css("display", "block");
             }, 500);
+
+            getUserInfo();
+        }
+
+        function getUserInfo(){
+
 
         }
 
@@ -62,7 +69,7 @@
                 if(checkImage()){
                     $ionicLoadbar.show();
                     createID();
-                    $imageService.storeImage(vm.uploadMe, "Ames,IA", "Just Testing now", vm.uniqueID, "ProfilePic")
+                    $imageService.storeUser(vm.uploadMe, vm.country, vm.region, vm.uniqueID, "ProfilePic")
                         .then(function(data) {
                             $ionicLoadbar.hide();
                             vm.profileImage = vm.uploadMe;

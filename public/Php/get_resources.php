@@ -6,5 +6,5 @@
  * Time: 12:31 AM
  */
 
-$info = "[" . file_get_contents("images.txt") . "]";
+$info = "[" . file_get_contents("items.txt") . "]";
 echo $info;

@@ -11,7 +11,6 @@
 
             <img class = "uploaded_image" src="{{vm.uploadMe}}" >
 
-            <button type="submit" ng-click="vm.upload()" class="imageButton button button-positive button-block">Upload</button>
     </div>
     <div class = "col-md-4">
 
@@ -22,7 +21,7 @@
 <hr>
 
 <br>
-<h3 class = "text-primary">Location Info</h3>
+<h3 class = "text-primary">My Location Info</h3>
 <br>
 <br>
 <div class = "row form-group">
@@ -43,44 +42,8 @@
     </div>
 </div>
 
-<h3 class = "text-primary">Add Item</h3>
 <br>
-<br>
-<div class = "row form-group">
-    <div class="col-md-2">
-        <label for="item"><b>Item Name: </b></label>
-    </div>
-    <div class = "col-md-10">
-        <input placeholder = "Steel Wire" type="text" class="form-control" id="item" ng-model="vm.itemName">
-    </div>
-</div>
-<br>
-<div class = "row form-group">
-    <div class="col-md-2">
-        <label for="description"><b>Description: </b></label>
-    </div>
-    <div class = "col-md-10">
-        <input placeholder = "Tough and Durable" type="text" class="form-control" id="description" ng-model="vm.itemDesc">
-    </div>
-</div>
 
-<div class = "row">
-    <div class = "col-md-4">
-        <img class = "profileImage" src ="{{vm.itemImage}}">
-    </div>
-    <div class = "col-md-4">
-            <button class="file-upload"><input type="file" itemread="vm.uploadItem" class="file-input">Choose Item Image</button>
-
-            <img class = "uploaded_image" src="{{vm.uploadItem}}" >
-    </div>
-    <div class = "col-md-4">
-    </div>
-</div>
-<div class = "row">
-    <button type="submit" ng-click="vm.uploadItemImage()" class="imageButton button button-positive button-block">Add Item</button>
-</div>
-
-<br>
-<br>
+<button type="submit" ng-click="vm.upload()" class="imageButton button button-positive button-block">Save Info</button>
 
 

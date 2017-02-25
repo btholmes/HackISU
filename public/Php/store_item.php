@@ -9,12 +9,14 @@
 
 //session_start();
 
-define('DIRECTORY', '../uploadedImages');
+define('DIRECTORY', '../ItemPics');
 
 
 $data = file_get_contents("php://input");
 $post = json_decode($data);
 $image = $post->item;
+$country = $post->country;
+$region = $post->region;
 $name = $post->name;
 $desc = $post->description;
 $id = $post->id;
@@ -34,7 +36,7 @@ file_put_contents($fileURL, $imageData);
 //chmod(DIRECTORY, 755);
 
 
-$fileContents = file_get_contents("images.txt");
+$fileContents = file_get_contents("items.txt");
 $comma = ",";
 
 if(!$fileContents){
@@ -42,10 +44,10 @@ if(!$fileContents){
 }
 
 
-$userFile = "images.txt";
+$userFile = "items.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $fileURL, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
+$info = array('url' => $fileURL, 'country' => $country, 'region' => $region, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
 
 $info = json_encode($info);
 
