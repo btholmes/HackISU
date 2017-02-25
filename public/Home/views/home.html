@@ -7,18 +7,20 @@
         <img class = "profileImage" src ="{{vm.profileImage}}">
     </div>
     <div class = "col-md-4">
-        <form method = "post">
             <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Profile Image</button>
 
             <img class = "uploaded_image" src="{{vm.uploadMe}}" >
 
             <button type="submit" ng-click="vm.upload()" class="imageButton button button-positive button-block">Upload</button>
-        </form>
     </div>
     <div class = "col-md-4">
 
     </div>
 </div>
+
+<br>
+<hr>
+
 <br>
 <h3 class = "text-primary">Location Info</h3>
 <br>
@@ -67,16 +69,15 @@
         <img class = "profileImage" src ="{{vm.itemImage}}">
     </div>
     <div class = "col-md-4">
-        <form method = "post">
             <button class="file-upload"><input type="file" itemread="vm.uploadItem" class="file-input">Choose Item Image</button>
 
             <img class = "uploaded_image" src="{{vm.uploadItem}}" >
-
-            <button type="submit" ng-click="vm.uploadItemImage()" class="imageButton button button-positive button-block">Upload</button>
-        </form>
     </div>
     <div class = "col-md-4">
     </div>
+</div>
+<div class = "row">
+    <button type="submit" ng-click="vm.uploadItemImage()" class="imageButton button button-positive button-block">Add Item</button>
 </div>
 
 <br>

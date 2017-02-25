@@ -10,7 +10,7 @@
         var sv = this;
         sv.storeImage = storeImage;
 
-        function storeImage(image, name, desc, uniqueID) {
+        function storeImage(image, name, desc, uniqueID, picType) {
             return $http({
                 method: 'POST',
                 url: "../Php/store_image.php",
@@ -19,7 +19,8 @@
                     'item' : image,
                     'name' : name,
                     'description' : desc,
-                    'id' : uniqueID
+                    'id' : uniqueID,
+                    'type' : picType
                 }
             });
         }

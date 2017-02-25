@@ -42,7 +42,7 @@
             if(vm.uploadItem != undefined){
                 $ionicLoadbar.show();
                 createID();
-                $imageService.storeImage(vm.uploadItem, "Ames,IA", "Just Testing now", vm.uniqueID)
+                $imageService.storeImage(vm.uploadItem, "Ames,IA", "Just Testing now", vm.uniqueID, "itemPic")
                     .then(function(data) {
                         $ionicLoadbar.hide();
                         vm.itemImage = vm.uploadItem;
@@ -62,7 +62,7 @@
                 if(checkImage()){
                     $ionicLoadbar.show();
                     createID();
-                    $imageService.storeImage(vm.uploadMe, "Ames,IA", "Just Testing now", vm.uniqueID)
+                    $imageService.storeImage(vm.uploadMe, "Ames,IA", "Just Testing now", vm.uniqueID, "ProfilePic")
                         .then(function(data) {
                             $ionicLoadbar.hide();
                             vm.profileImage = vm.uploadMe;

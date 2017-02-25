@@ -18,6 +18,7 @@ $image = $post->item;
 $name = $post->name;
 $desc = $post->description;
 $id = $post->id;
+$picType = $post->type;
 
 $fileURL = DIRECTORY ."/$id.jpg";
 
@@ -44,7 +45,7 @@ if(!$fileContents){
 $userFile = "images.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $fileURL, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name);
+$info = array('url' => $fileURL, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
 
 $info = json_encode($info);
 
