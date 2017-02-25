@@ -19,7 +19,7 @@
             });
         }
 
-        function storeItem(image, myCountry, myRegion, myName, desc, uniqueID, picType) {
+        function storeItem(image, myCountry, myRegion, myAddress, myName, desc, uniqueID, picType) {
             return $http({
                 method: 'POST',
                 url: "../Php/store_item.php",
@@ -28,6 +28,7 @@
                     'item' : image,
                     'country' : myCountry,
                     'region' : myRegion,
+                    'address' : myAddress,
                     'name' : myName,
                     'description' : desc,
                     'id' : uniqueID,
