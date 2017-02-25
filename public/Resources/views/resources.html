@@ -1,0 +1,87 @@
+<h1 class = "text-center text-primary">My Resources</h1>
+<br>
+<hr>
+<br>
+
+<div style = "border-bottom: 1px solid black; word-wrap: break-word;" class = "row" ng-repeat="item in vm.resources">
+    <div class = "col-md-3">
+        <img src="{{item.url}}">
+    </div>
+    <div class = "col-md-3">
+        <b>{{item.name}}</b>
+        <p>{{item.description}}</p>
+    </div>
+    <div class = "col-md-3">
+        {{item.country}}
+    </div>
+    <div class = "col-md-3">
+        {{item.region}}
+    </div>
+
+</div>
+
+<br>
+<br>
+<hr>
+<br>
+
+<h1 class = "text-primary">Add Item</h1>
+<br>
+<br>
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="country"><b>Country: </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "United States" type="text" class="form-control" id="country" ng-model="vm.country">
+    </div>
+</div>
+<br>
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="region"><b>City/State(Region): </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "Ames,IA" type="text" class="form-control" id="region" ng-model="vm.region">
+    </div>
+</div>
+<br>
+
+
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="item"><b>Item Name: </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "Steel Wire" type="text" class="form-control" id="item" ng-model="vm.itemName">
+    </div>
+</div>
+<br>
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="description"><b>Description: </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "Tough and Durable" type="text" class="form-control" id="description" ng-model="vm.itemDesc">
+    </div>
+</div>
+
+<div class = "row">
+    <div class = "col-md-4">
+        <img class = "profileImage" src ="{{vm.itemImage}}">
+    </div>
+    <div class = "col-md-4">
+        <button class="file-upload"><input type="file" itemread="vm.uploadItem" class="file-input">Choose Item Image</button>
+
+        <img class = "uploaded_image" src="{{vm.uploadItem}}" >
+    </div>
+    <div class = "col-md-4">
+    </div>
+</div>
+<br>
+<div class = "row">
+    <button type="submit" ng-click="vm.uploadItemImage()" class="imageButton button button-positive button-block">Add Item</button>
+</div>
+
+<br>
+<br>

@@ -10,16 +10,17 @@
         var sv = this;
         sv.storeImage = storeImage;
 
-        function storeImage(image, name, desc, uniqueID) {
+        function storeUser(image, myCountry, myRegion, uniqueID, picType) {
             return $http({
                 method: 'POST',
-                url: "../Php/store_image.php",
+                url: "../Php/store_user.php",
                 // url: "./php/putImageInDirectory.php",
                 data: {
                     'item' : image,
-                    'name' : name,
-                    'description' : desc,
-                    'id' : uniqueID
+                    'country' : myCountry,
+                    'region' : myRegion,
+                    'id' : uniqueID,
+                    'type' : picType
                 }
             });
         }

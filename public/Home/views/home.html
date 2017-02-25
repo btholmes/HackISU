@@ -1,22 +1,49 @@
-<h1>Welcome to La Busqueda</h1>
+<h1 class = "text-center text-primary">Welcome to La Busqueda</h1>
+<br>
+<br>
 
 <div class = "row">
     <div class = "col-md-4">
         <img class = "profileImage" src ="{{vm.profileImage}}">
     </div>
-    <div class = "col-md-8">
-        <form method = "post">
-            <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Image</button>
+    <div class = "col-md-4">
+            <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Profile Image</button>
 
             <img class = "uploaded_image" src="{{vm.uploadMe}}" >
 
-            <button type="submit" ng-click="vm.post()" class="imageButton button button-positive button-block">Post</button>
-        </form>
+    </div>
+    <div class = "col-md-4">
+
     </div>
 </div>
-<div class = "row">
-    <div class="form-group col-md-12">
-        <label for="country">Country:</label>
-        <input type="text" class="form-control" id="country" ng-mode="vm.country">
+
+<br>
+<hr>
+
+<br>
+<h3 class = "text-primary">My Location Info</h3>
+<br>
+<br>
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="country"><b>Country: </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "United States" type="text" class="form-control" id="country" ng-model="vm.country">
     </div>
 </div>
+<br>
+<div class = "row form-group">
+    <div class="col-md-2">
+        <label for="region"><b>City/State(Region): </b></label>
+    </div>
+    <div class = "col-md-10">
+        <input placeholder = "Ames,IA" type="text" class="form-control" id="region" ng-model="vm.region">
+    </div>
+</div>
+
+<br>
+
+<button type="submit" ng-click="vm.upload()" class="imageButton button button-positive button-block">Save Info</button>
+
+

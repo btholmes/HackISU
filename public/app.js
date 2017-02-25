@@ -18,11 +18,11 @@ angular.module("myApp", ['ui.router', 'ngAnimate', 'ionic'])
 			controller: 'homeCtrl',
 			controllerAs: 'vm'
 		})
-		.state('places', {
-			name: 'places',
-			url: '/places',
-			templateUrl: 'Places/views/places.html',
-			controller: 'placesCtrl',
+		.state('resources', {
+			name: 'resources',
+			url: '/resources',
+			templateUrl: 'Resources/views/resources.html',
+			controller: 'resourcesCtrl',
 			controllerAs: 'vm'
 		})
 		.state('map', {

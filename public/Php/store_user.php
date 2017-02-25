@@ -9,18 +9,18 @@
 
 //session_start();
 
-define('DIRECTORY', '../uploadedImages');
+define('DIRECTORY', '../Users');
 
 
 $data = file_get_contents("php://input");
 $post = json_decode($data);
 $image = $post->item;
-$name = $post->name;
-$desc = $post->description;
+$country = $post->country;
+$region = $post->region;
 $id = $post->id;
 $picType = $post->type;
 
-$fileURL = DIRECTORY ."/$id.jpg";
+$profilePicUrl = "../ProfilePics" ."/$id.jpg";
 
 $image = str_replace('data:image/jpeg;base64,', '', $image);
 $image = str_replace('data:image/png;base64,', '', $image);
@@ -30,11 +30,11 @@ $image = str_replace(' ', '+', $image);
 
 $imageData = base64_decode($image);
 
-file_put_contents($fileURL, $imageData);
+file_put_contents($profilePicUrl, $imageData);
 //chmod(DIRECTORY, 755);
 
 
-$fileContents = file_get_contents("images.txt");
+$fileContents = file_get_contents("users.txt");
 $comma = ",";
 
 if(!$fileContents){
@@ -42,10 +42,10 @@ if(!$fileContents){
 }
 
 
-$userFile = "images.txt";
+$userFile = "users.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $fileURL, 'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
+$info = array('url' => $profilePicUrl, 'country' => $country, 'region' => $region, 'user' => "btholmes@iastate.edu", 'type' => $picType);
 
 $info = json_encode($info);
 

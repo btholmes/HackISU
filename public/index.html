@@ -2,9 +2,9 @@
 <meta charset="UTF-8">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Holmes</title>
+<title>La Busqueda</title>
 
-<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -41,7 +41,7 @@
 
 </head>
 
-<body ng-app="myApp" >
+<body style = "overflow: scroll" ng-app="myApp" >
 
 	<nav class="navbar navbar-default bottomNavBorder mainNavbar" role="navigation"> 
 		<div class="container ">
@@ -56,7 +56,7 @@
 			</div>
 			 	<div class="navbar-collapse collapse"> 
 			 		<ul class="nav navbar-nav navbar-right navNames"> 
-			 			<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="places">Places</a></li>
+			 			<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="resources">Resources</a></li>
 						<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="map">Map</a></li>
 			 		</ul>
 			 	</div>
@@ -104,8 +104,11 @@
 	<script src="Login/controllers/loginCtrl.js"></script>
 	<script src="Home/controllers/homeCtrl.js"></script>
 	<script src="Home/directives/fileread.js"></script>
+	<script src="Home/directives/itemread.js"></script>
 	<script src="Home/services/imageService.js"></script>
-	<script src="Places/controllers/placesCtrl.js"></script>
+	<script src="Resources/services/getResourcesService.js"></script>
+
+	<script src="Resources/controllers/resourcesCtrl.js"></script>
 
 	<script src="Map/controllers/mapCtrl.js"></script>
 	<script src="Map/factories/mapService.js"></script>
