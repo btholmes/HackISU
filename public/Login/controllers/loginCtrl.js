@@ -18,54 +18,59 @@
         vm.Password;
         vm.User;
 
+        vm.regEmail;
+        vm.regPassword;
+        vm.regPassword2;
+
+
         function signIn(){
-            var error = false;
         // alert("in sign in" + vm.Email + " " + vm.Password);
               if (!vm.Email || !vm.Password) {
+                alert("Email and Password are Required");
                 return console.log('email and password required');
               }
               // Sign in user
-              firebase.auth().signInWithEmailAndPassword(vm.Email, vm.Password)
-                .catch(function(error) {
-                  // Handle Errors here.
-                    error = true;
+              firebase.auth().signInWithEmailAndPassword(vm.Email, vm.Password).then(function() {
+                 // Email sent.
+                 $state.go("home");
+               }, function(error) {
                   var errorCode = error.code;
-                  var errorMessage = error.message;
-                  console.log('signIn error', error);
-                  // ...
-                });
-            if(!error){
-                $state.go("home");
-            }
-
+                       var errorMessage = error.message;
+                       console.log('signIn error', error);
+                       alert("Email or Password are wrong");
+               });
 
         }
 
         function register() {
 
-            var error = false;
-              if (!vm.Email || !vm.Password) {
+              if (!vm.regEmail || !vm.regPassword || !vm.regPassword2) {
                 return console.log('email and password required');
               }
+              if(!(vm.regPassword == vm.regPassword2)){
+                return console.log("This shit doesn't match")
+              }
               // Register user
-              firebase.auth().createUserWithEmailAndPassword(vm.Email, vm.Password)
-                .catch(function(error) {
-                  console.log('register error', error);
-                  if (error.code === 'auth/email-already-in-use') {
-                    var credential = firebase.auth.EmailAuthProvider.credential(vm.Email, vm.Password);
-                    signInWithGoogle()
-                      .then(function() {
-                        firebase.auth().currentUser.link(credential)
-                          .then(function(user) {
-                            console.log("Account linking success", user);
-                              $state.go("home");
-                          }, function(error) {
-                            console.log("Account linking error", error);
-                          });
-                      });
-                  }
-                });
-
+              firebase.auth().createUserWithEmailAndPassword(vm.regEmail, vm.regPassword).then(function() {
+                    alert("Damn Straight you are registered!");
+//                $state.go("home");
+              }, function(error) {
+                 console.log('register error', error);
+                   if (error.code === 'auth/email-already-in-use') {
+                     var credential = firebase.auth.EmailAuthProvider.credential(vm.regEmail, vm.regPassword);
+                     signInWithGoogle()
+                       .then(function() {
+                         firebase.auth().currentUser.link(credential)
+                           .then(function(user) {
+                             console.log("Account linking success", user);
+                                // Don't go home straight from registration
+//                               $state.go("home");
+                           }, function(error) {
+                             console.log("Account linking error", error);
+                           });
+                       });
+                   }
+              });
         }
 
         function signInWithGoogle(){
@@ -86,6 +91,12 @@
               firebase.auth().signOut();
 
         }
+
+    // Listen to auth state changes
+        firebase.auth().onAuthStateChanged(function(user) {
+          vm.User = user;
+          console.log('user', user);
+        });
 
 //         (function() {
 //                var app = document.querySelector('#app');
@@ -144,11 +155,7 @@
 //                  // Sign out
 //                  firebase.auth().signOut();
 //                };
-                // Listen to auth state changes
-                firebase.auth().onAuthStateChanged(function(user) {
-                  vm.User = user;
-                  console.log('user', user);
-                });
+
 //              })();
 
     }
