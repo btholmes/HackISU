@@ -42,8 +42,14 @@
             $getResourcesService.getResources()
                 .then(function(data) {
                     $ionicLoadbar.hide();
-                    vm.resources = data.data;
+                    var result = data.data;
 
+                    var thisUser = firebase.auth().currentUser.email;
+                    for(var i = 0; i < result.length; i++){
+                        if(result[i].user == thisUser ){
+                            vm.resources.push(result[i]);
+                        }
+                    }
                     // alert(JSON.stringify(vm.resources));
                 });
 

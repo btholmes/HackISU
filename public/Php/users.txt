@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 {"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
 ,{"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
 ,{"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
 ,{"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
 ,{"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
 ,{"url":"..\/ProfilePics\/.jpg","country":null,"region":null,"user":null,"type":null}
+=======
+{"url":"..\/ProfilePics\/11712517727589.jpg","country":"United States","region":"Ames, IA","user":"redbull@gmail.com","type":"ProfilePic"}
+>>>>>>> fcf730e6af1d51780137b386a43d69e06cae739a

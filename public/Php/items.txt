@@ -1,2 +1,0 @@
-{"url":"..\/ItemPics\/11712514490634.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough Man","user":"btholmes@iastate.edu","name":"Steel Wire","type":"itemPic"}
-,{"url":"..\/ItemPics\/11712514490634.jpg","country":"United States","region":"Ames, IA","address":"2320 Lincoln Way","description":"Tough Man","user":"btholmes@iastate.edu","name":"Steel Wire","type":"itemPic"}
