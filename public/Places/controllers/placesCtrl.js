@@ -13,10 +13,10 @@
 
 
         function init(){
-            $('.mainNavbar').css("opacity", "0");
+            $('.mainNavbar').css("opacity", "1");
 
             $timeout(function(){
-                $('.mainNavbar').css("display", "none");
+                $('.mainNavbar').css("display", "block");
             }, 500);
 
         }
