@@ -58,7 +58,7 @@
                     .then(function(data) {
                         $ionicLoadbar.hide();
                         // alert("Posted Successfully");
-                        alert(JSON.stringify(data));
+                        alert(JSON.stringify(data.data));
                         // localStorage.setItem("newImage", 1);
                         vm.country = "";
                         vm.region = "";
