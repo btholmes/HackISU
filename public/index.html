@@ -10,6 +10,35 @@
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="Assets/style.css">
+
+
+	<!-- FIREBASE STUFF  -->
+	<!--Polymer-->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<link rel="import" href="bower_components/polymer/polymer.html">
+	<link rel="import" href="bower_components/paper-material/paper-material.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/paper-input/paper-input.html">
+	<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+	<script>
+    var config = {
+      apiKey: "AIzaSyCkjl6KqOBYsAHhKmEF_qg_0actBrYfZaI",
+      authDomain: "la-busqueda.firebaseapp.com",
+      databaseURL: "https://la-busqueda.firebaseio.com",
+      storageBucket: "la-busqueda.appspot.com",
+      messagingSenderId: "318797924276"
+    };
+    firebase.initializeApp(config);
+    var rootRef = firebase.database().ref();
+
+
+  </script>
+
+
+
 </head>
 
 <body ng-app="myApp" >

@@ -1,17 +1,31 @@
-<html> 
-<head> 
-    <h1 class="center-title">This is the {{vm.page}}</h1>   
-</head>  
-<body> 
-    <div class="container center-shit"> 
-        <input id="emailInput" type="email" placeholder="Enter Email"><br><br> 
-        <input id="passInput" type="password" placeholder="Enter Password"><br><br> 
-        <button id="btnLogin" class="btn btn-default">Log in</button> 
-        <button id="btnSignUp" class="btn btn-secondary">Registration</button> 
-        <button id="btnLogOut" class="btn btn-secondary hide">GTFO</button>   
-        <!--<button id="btnLogOut" ng-click="vm.clicking()" class="btn btn-secondary hide">GTFO</button>-->  
-    </div>  
-</body>
-   </html>
+  <!-- Install dependencies with Bower:
+    bower install PolymerElements/paper-elements#^1.0.7 -->
+
+<!--<html>-->
+<!--<head>-->
+  <!--<title>Auth Example</title>-->
+
+
+  <!--<body>-->
+    <!--<template is="dom-bind" id="app">-->
+      <!--<paper-material elevation="1" style="padding: 2rem;">-->
+        <h2>Input your email and password. {{vm.page}}</h2>
+        <!--<paper-input ng-model="vm.Email" value="{{email::input}}" type="text"></paper-input>-->
+        <!--<paper-input ng-model="vm.Password" value="{{password::input}}" type="password"></paper-input>-->
+        <!--<paper-button ng-click="vm.signIn()">Sign In</paper-button>-->
+        <!--<paper-button ng-click="vm.register()">Register</paper-button>-->
+        <!--<paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>-->
+        <!--<paper-button ng-click="vm.signOut()">Sign out</paper-button>-->
+          <paper-input ng-model="vm.Email" type="text"></paper-input>
+            <br>
+
+          <paper-input ng-model="vm.Password" type="password"></paper-input>
+            <br>
+          <paper-button ng-click="vm.signIn()">Sign In</paper-button>
+          <paper-button ng-click="vm.register()">Register</paper-button>
+          <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>
+          <paper-button ng-click="vm.signOut()">Sign out</paper-button>
+      <!--</paper-material>-->
+    <!--</template>-->
 
 
