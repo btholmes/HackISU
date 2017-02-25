@@ -105,11 +105,8 @@
 
 .scrolled{
 	opacity: 0 !important;
-<<<<<<< HEAD
-=======
 	pointer-events: none !important;
 	cursor: default !important;
->>>>>>> ecc18fe9946c82f21b02118647e5a147f8ffedb8
 }
 .navbar-default .navbar-brand {
 	color: #FFF;
@@ -406,7 +403,7 @@ textarea{
 .car {
 /*   position: absolute; */
   width: 50%;
-  height: 70x;
+  height: 70px;
   top: 40%;
 /*   left: 50%; */
   z-index: 9;
@@ -958,8 +955,6 @@ footer {
 
 
 /*THIS IS ALL FOR HOME PAGE*/
-<<<<<<< HEAD
-=======
 
 .homeTextTitle{
 	font-size: 40px;
@@ -968,7 +963,6 @@ footer {
 	font-size:15px;
 }
 
->>>>>>> ecc18fe9946c82f21b02118647e5a147f8ffedb8
 @media only screen and (max-width: 569px){
 	.text{
 		font-size: 16px;
@@ -1070,10 +1064,8 @@ ul.tech li {
 
 .list{
 	list-style: none;
-<<<<<<< HEAD
 }
-=======
-}
+
 
 /*About PAGE*/
 
@@ -1082,4 +1074,3 @@ ul.tech li {
 	height: 100px;
 	margin: 20px;
 }
->>>>>>> ecc18fe9946c82f21b02118647e5a147f8ffedb8

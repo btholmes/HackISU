@@ -2,13 +2,15 @@
     'use strict';
 
     angular.module("myApp" )
-        .controller("placesCtrl",placesCtrl);
+        .controller("homeCtrl",homeCtrl);
 
-    placesCtrl.$inject = ['$scope', '$timeout'];
+    homeCtrl.$inject = ['$scope', '$timeout'];
 
-    function placesCtrl($scope, $timeout){
+    function homeCtrl($scope, $timeout){
         var vm = this;
         vm.init = init;
+        vm.page = "Home Page";
+
 
 
 

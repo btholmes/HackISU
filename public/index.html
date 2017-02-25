@@ -14,7 +14,6 @@
 
 <body ng-app="myApp" >
 
-	
 	<nav class="navbar navbar-default bottomNavBorder mainNavbar" role="navigation"> 
 		<div class="container ">
 			<div class="navbar-header"> 
@@ -28,9 +27,7 @@
 			</div>
 			 	<div class="navbar-collapse collapse"> 
 			 		<ul class="nav navbar-nav navbar-right navNames"> 
-<!-- 			 			<li><a ng-click = "show = home" class="navHeader" ui-sref="home">Home Page</a></li> -->
 			 			<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="places">Places</a></li>
-						<!--<li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="notes">Notes</a></li>-->
 			 		</ul>
 			 	</div>
 		</div>
@@ -72,8 +69,9 @@
 	<script src="app.js"></script>
 	<script src="Constants/constants.js"></script>
 	<script src="Login/controllers/loginCtrl.js"></script>
+	<script src="Home/controllers/homeCtrl.js"></script>
 	<script src="Places/controllers/placesCtrl.js"></script>
-	
+
 	<script src="Map/controllers/mapCtrl.js"></script>
 	<script src="Map/factories/mapService.js"></script>
 	<script src="Map/directives/mapDirectiveMark.js"></script>

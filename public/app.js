@@ -1,7 +1,7 @@
 angular.module("myApp", ['ui.router', 'ngAnimate'])
 	.config(function($stateProvider, $urlRouterProvider){
 		
-		$urlRouterProvider.otherwise('/login');
+		$urlRouterProvider.otherwise('/home');
 		
 		$stateProvider
 		.state('login', {
@@ -9,6 +9,13 @@ angular.module("myApp", ['ui.router', 'ngAnimate'])
 			url: '/login',
 			templateUrl: 'Login/views/login.html',
 			controller: 'loginCtrl',
+			controllerAs: 'vm'
+		})
+		.state('home', {
+			name: 'home',
+			url: '/home',
+			templateUrl: 'Home/views/home.html',
+			controller: 'homeCtrl',
 			controllerAs: 'vm'
 		})
 		.state('places', {
