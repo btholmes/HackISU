@@ -22,6 +22,7 @@ $name = $post->name;
 $desc = $post->description;
 $id = $post->id;
 $picType = $post->type;
+$email = $post->email;
 
 $fileURL = DIRECTORY ."/$id.jpg";
 
@@ -48,7 +49,7 @@ if(!$fileContents){
 $userFile = "items.txt";
 $handle = fopen($userFile, "a+");
 
-$info = array('url' => $fileURL, 'country' => $country, 'region' => $region, 'address' => $address,  'description' => $desc, 'user' => "btholmes@iastate.edu", 'name' => $name, 'type' => $picType);
+$info = array('url' => $fileURL, 'country' => $country, 'region' => $region, 'address' => $address,  'description' => $desc, 'user' => $email, 'name' => $name, 'type' => $picType);
 
 $info = json_encode($info);
 

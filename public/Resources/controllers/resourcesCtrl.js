@@ -60,14 +60,15 @@
             if(vm.uploadItem != undefined){
                 $ionicLoadbar.show();
                 createID();
+                var email = firebase.auth().currentUser.email;
                 // alert(vm.uploadItem + " "+  vm.country + " " + vm.region + " " + vm.itemName + " " + vm.itemDesc + " " + vm.uniqueID);
-                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region, vm.address, vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic")
+                $getResourcesService.storeItem(vm.uploadItem, vm.country, vm.region, vm.address, vm.itemName, vm.itemDesc, vm.uniqueID, "itemPic", email)
                     .then(function(data) {
                         $ionicLoadbar.hide();
                         // alert("Posted Successfully");
                         alert(JSON.stringify(data.data));
                         // localStorage.setItem("newImage", 1);
-                        var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"address" : vm.address,"description":vm.itemDesc,"user":"btholmes@iastate.edu","name":vm.itemName,"type":"itemPic"};
+                        var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"address" : vm.address,"description":vm.itemDesc,"user": email,"name":vm.itemName,"type":"itemPic"};
                         vm.resources.push(newObj);
                         vm.country = "";
                         vm.region = "";
