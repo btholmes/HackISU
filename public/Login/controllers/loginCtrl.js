@@ -33,7 +33,7 @@
               // Sign in user
               firebase.auth().signInWithEmailAndPassword(vm.Email, vm.Password).then(function() {
                  // Email sent.
-                 $state.go("home");
+                 $state.go("menu.home");
                }, function(error) {
                   var errorCode = error.code;
                        var errorMessage = error.message;

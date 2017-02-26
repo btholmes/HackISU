@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great"); /**'Fredericka the Great', cursive;  **/
 
 
+<<<<<<< HEAD
 /*log in*/
 
 .titleLogin {
@@ -12,6 +13,17 @@
 	display: block;
 }
 
+=======
+.prettyTitle{
+	font-family: 'Tangerine', serif;
+	font-size: 5em;
+}
+.prettyTitle2{
+	font-family: 'Tangerine', serif;
+	font-size: 4em;
+	color: #00d3c3;
+}
+>>>>>>> c8c6a470cd19e3a58de35e741f30bc7c52f657af
 /*OPENING PAGE*/
 .mainList li {
 	float: left;
@@ -254,8 +266,8 @@ body {
 	width: 100%;
 	height: 100%;
 	/*overflow: hidden;*/
-	margin: 0px;
-	padding: 0px;
+	margin: 0px !important;
+	padding: 0px !important;
 
 
 }
@@ -1009,6 +1021,10 @@ footer {
 
 /*PORTFOLIO CARDS*/
 
+.item:hover{
+	cursor: pointer;
+ }
+
 
  .single-item {
 	 text-align: center;
@@ -1111,7 +1127,7 @@ ul.tech li {
 	width:100%;
 	width:100%;
 	text-align:center;
-	color:#000;
+	color:#fff;
 	font-size:1.2em;
 	background: transparent;
 	border: 2px solid #888;
@@ -1145,3 +1161,91 @@ ul.tech li {
 	filter: alpha(opacity=0);
 	height:100%;
 }
+<<<<<<< HEAD
+=======
+
+/*LOGIN PAGE **********************/
+
+/*body {*/
+/*cursor: url('http://ionicframework.com/img/finger.png'), auto;*/
+/*}*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(https://fonts.googleapis.com/css?family=Tangerine);         /** 'Tangerine', serif;  **/
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");   /** 'Abril Fatface', cursive; **/
+@import url("https://fonts.googleapis.com/css?family=Old+Standard+TT"); /** 'Old Standard TT', serif; **/
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great"); /**'Fredericka the Great', cursive;  **/
+
+.login-page {
+	background: url('../appImages/login1.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.no-background {
+	background: none !important;
+}
+
+
+.button-positive:hover{
+	opacity: 0.5;
+}
+.imageButton{
+// margin-left:10px !important   ;
+}
+.button-royal:hover{
+	opacity: 0.5;
+}
+
+.input-line {
+	border-width: 0 0 2px 0 !important;
+	border-color: #fff !important;
+	padding-left:20px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    #fff !important;
+	opacity:  0.7;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #fff !important;
+	opacity:  0.7;
+}
+
+.input-text {
+	color: #fff !important;
+}
+
+input:focus {
+	box-shadow: inset 0 -5px 45px rgba(215, 215, 215, 0.4), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+.logo {
+	margin-top: 10vh;
+}
+
+.logo h1 {
+	font-size: 100px;
+	text-align: center;
+	color: #fff;
+	font-family: 'Tangerine', serif;
+}
+
+.login-form {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+}
+.white {
+	color: white;
+}
+.signIn:hover{
+	cursor: pointer;
+}
+
+/*LOGIN PAGE END **********************/
+
+
+
+>>>>>>> c8c6a470cd19e3a58de35e741f30bc7c52f657af
