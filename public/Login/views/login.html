@@ -1,11 +1,16 @@
   <!-- Install dependencies with Bower:
     bower install PolymerElements/paper-elements#^1.0.7 -->
-  <h1 style="text-align: center;" >La Busqueda</h1>
-  <br>
-  <h2>Input your email and password</h2>
+  <div style="text-align: center">
+    <h1>La Busqueda</h1>
+    <br>
+  </div>
 
+  <div id="login" style="display: block">
+
+    <h2 style="text-align: center"> Log in</h2>
   <div class = "row form-group">
-      <div class="col-md-2">
+    <div class="col-md-4"/>
+    <div class="col-md-1">
           <label for="email"><b>Email: </b></label>
       </div>
       <div class = "col-md-4">
@@ -13,54 +18,74 @@
       </div>
   </div>
   <div class = "row form-group">
-      <div class="col-md-2">
-          <label for="pass"><b>Password:</b></label>
+      <div class="col-md-4"/>
+      <div class="col-md-1">
+          <label for="pass"><b>Pass: </b></label>
       </div>
       <div class = "col-md-4">
           <input placeholder = "*******" type="password" class="form-control" id="pass" ng-model="vm.Password">
       </div>
   </div>
+  <div style="text-align: center">
   <paper-button ng-click="vm.signIn()">Sign In</paper-button>
+  <paper-button ng-click="vm.signInWithGoogle()">Google Sign In</paper-button>
+  <paper-button onclick="showReg()"> Register </paper-button>
+</div>
+</div>
 
-  <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button>
+  <script>
+    function showReg(){
+      console.log("fuck");
+      document.getElementById('login').style.display = 'none';
+     document.getElementById('registration').style.display = 'block';
 
-  <br>
+    };
 
-  <h2>Register</h2>
+    function showLogin(){
+     document.getElementById('login').style.display = 'block';
+     document.getElementById('registration').style.display = 'none';
+    };
+  </script>
 
-  <div class = "row form-group">
-      <div class="col-md-2">
-          <label for="regEmail"><b>Email: </b></label>
-      </div>
-      <div class = "col-md-4">
-          <input placeholder = "name@domain.xyz" type="text" class="form-control" id="regEmail" ng-model="vm.regEmail">
-      </div>
+
+
+  <div id="registration" style="display: none">
+
+    <h2 style="text-align: center" >Register</h2>
+
+    <div class = "row form-group">
+      <div class="col-md-4"/>
+      <div class="col-md-1">
+            <label for="regEmail"><b>Email: </b></label>
+        </div>
+        <div class = "col-md-4">
+            <input placeholder = "name@domain.xyz" type="text" class="form-control" id="regEmail" ng-model="vm.regEmail">
+        </div>
+    </div>
+
+    <div class = "row form-group">
+      <div class="col-md-4"/>
+      <div class="col-md-1">
+            <label for="regPassword"><b>Pass: </b></label>
+        </div>
+        <div class = "col-md-4">
+            <input placeholder = "*******" type="password" class="form-control" id="regPassword" ng-model="vm.regPassword">
+        </div>
+
+    </div>
+    <div class = "row form-group">
+        <div class="col-md-4"/>
+        <div class="col-md-1">
+            <label for="regPassword2"><b>Repeat</b></label>
+        </div>
+        <div class = "col-md-4">
+            <input placeholder = "*******" type="password" class="form-control" id="regPassword2" ng-model="vm.regPassword2">
+        </div>
+
+
+    </div>
+    <div style="text-align: center">
+
+    <paper-button ng-click="vm.register()" onclick="showLogin()">Register</paper-button>
   </div>
-
-  <div class = "row form-group">
-      <div class="col-md-2">
-          <label for="regPassword"><b>Password: </b></label>
-      </div>
-      <div class = "col-md-4">
-          <input placeholder = "*******" type="password" class="form-control" id="regPassword" ng-model="vm.regPassword">
-      </div>
-      <!--<div class = "col-md-4">-->
-          <!--<input placeholder = "*******" type="password" class="form-control" id="regPassword2" ng-model="vm.regPassword2">-->
-      <!--</div><br>-->
-
   </div>
-  <div class = "row form-group">
-      <div class="col-md-2">
-          <label for="regPassword2"><b>Repeat Password: </b></label>
-      </div>
-      <div class = "col-md-4">
-          <input placeholder = "*******" type="password" class="form-control" id="regPassword2" ng-model="vm.regPassword2">
-      </div>
-
-
-  </div>
-
-  <!-- <paper-button ng-click="vm.signIn()">Sign In</paper-button> -->
-  <paper-button ng-click="vm.register()">Register</paper-button>
-  <!-- <paper-button ng-click="vm.signInWithGoogle()">Sign in with google</paper-button> -->
-  <paper-button ng-click="vm.signOut()">Sign out</paper-button>

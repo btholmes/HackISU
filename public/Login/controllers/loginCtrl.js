@@ -18,6 +18,7 @@
         vm.Password;
         vm.User;
 
+        vm.RegPage;
         vm.regEmail;
         vm.regPassword;
         vm.regPassword2;
@@ -39,13 +40,6 @@
                        console.log('signIn error', error);
                        alert("Email or Password are wrong");
                });
-
-//               var ref = firebase.database().ref();
-//               var authData = ref.getAuth();
-//
-//               if (authData) {
-//                 console.log("Authenticated user with uid:", authData.uid);
-//               }
 
         }
 
@@ -80,6 +74,17 @@
               });
         }
 
+        // app.signInWithGoogle = function() {
+        //   // Sign in with Google
+        //   var provider = new firebase.auth.GoogleAuthProvider();
+        //   provider.addScope('profile');
+        //   provider.addScope('email');
+        //   return firebase.auth().signInWithPopup(provider)
+        //     .catch(function(error) {
+        //       console.log('Google sign in error', error);
+        //     });
+        // };
+
         function signInWithGoogle(){
 
                   // Sign in with Google
@@ -93,9 +98,6 @@
 
         }
 
-        function signOut() {
-              firebase.auth().signOut();
-        }
 
     // Listen to auth state changes
         firebase.auth().onAuthStateChanged(function(user) {

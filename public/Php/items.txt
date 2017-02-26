@@ -1,1 +1,3 @@
 {"url":"..\/ItemPics\/117125172746788.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough","user":"redbull@gmail.com","name":"Steel Wire","type":"itemPic"}
+,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
+,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
