@@ -1,1 +1,7 @@
 {"url":"..\/ItemPics\/117125172746788.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough","user":"redbull@gmail.com","name":"Steel Wire","type":"itemPic"}
+,{"url":"..\/ItemPics\/copperWire.jpg","country":"United States","region":"Boone, IA","address":"30 S. 4th St.","description":"Electrical","user":"b@gmail.com","name":"Copper Wire","type":"itemPic"}
+,{"url":"..\/ItemPics\/guitar.png","country":"United States","region":"Ames, IA","address":"2320 Lincoln Way","description":"Learn to play","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
+,{"url":"..\/ItemPics\/pasta.jpeg","country":"United States","region":"Ames, IA","address":"400 Lincoln Way","description":"Freshly Made","user":"redbull@gmail.com","name":"Pasta","type":"itemPic"}
+,{"url":"..\/ItemPics\/sudafed.jpeg","country":"United States","region":"Boone, IA","address":"10 5th St.","description":"Medicine","user":"cdcf@iastate.edu","name":"Sudafed","type":"itemPic"}
+,{"url":"..\/ItemPics\/sugar.jpeg","country":"United States","region":"Ames, IA","address":"100 Lincoln Way","description":"Super Sweet","user":"cdcf@iastate.edu","name":"Sugar","type":"itemPic"}
+,{"url":"..\/ItemPics\/tylenol.jpeg","country":"United States","region":"Ames, IA","address":"275 Richardson Ct.","description":"Medicine","user":"cdcf@iastate.edu","name":"Tylenol","type":"itemPic"}

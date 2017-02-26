@@ -1,0 +1,76 @@
+<ion-view style = "background-image:url('../images/post1.jpg')" view-title="Home Menu" class = "homePage">
+    <ion-content class="padding ">
+        <!--<div class = "welcome">-->
+            <!--<h1 class = "text-center mainWelcome">Home Page</h1>-->
+            <!--<h4 class = "text-center">Weclome to CityScape : {{vm.user}}</h4>-->
+            <!--<p class =  "wrap">-->
+                <!--City Scape is an Ionic app that allows you to share photos with other people. Use the top nav bar to-->
+                <!--move around and find your way. You can view the city database, of all the pictures other uses-->
+                <!--have posted, or you can post your own. Be sure to leave a cool comment to let other people know if you-->
+                <!--would recommend travel to a certain location. <br><br>-->
+                <!--Have fun, and enjoy!-->
+
+            <!--</p>-->
+        <!--</div>-->
+        <br>
+        <h1 class = "text-center text-primary prettyTitle">Welcome to La Busqueda {{vm.currentUser}} </h1>
+        <br>
+        <br>
+
+        <div class = "row">
+            <div class = "col-md-4">
+                <img class = "profileImage" src ="{{vm.profileImage}}">
+            </div>
+            <div class = "col-md-4">
+                <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Profile Image</button>
+
+                <img class = "uploaded_image" src="{{vm.uploadMe}}" >
+
+            </div>
+            <div class = "col-md-4">
+
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <br>
+        <h3 class = "text-primary prettyTitle2">My Location Info</h3>
+        <br>
+        <br>
+        <div class="form-group">
+            <div class="list list-inset no-background">
+                <label class="item item-input no-background input-line">
+                    <span class ="white glyphicon glyphicon-globe white"></span>
+                    <input id="country" ng-model="vm.country" class="input-text" type="text" placeholder="United States">
+                </label>
+                <label class="item item-input no-background input-line">
+                    <span class = "glyphicon glyphicon-globe white"></span>
+                    <input id="region" ng-model="vm.region" class="input-text" type="text" placeholder="Ames, IA">
+                </label>
+            </div>
+        </div>
+        <!--<div class = "row form-group">-->
+            <!--<div class="col-md-2">-->
+                <!--<label style = "color:white;" for="country"><b>Country: </b></label>-->
+            <!--</div>-->
+            <!--<div class = "col-md-10">-->
+                <!--<input placeholder = "United States" type="text" class="form-control" id="country" ng-model="vm.country">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<br>-->
+        <!--<div class = "row form-group">-->
+            <!--<div class="col-md-2">-->
+                <!--<label style = "color:white;" for="region"><b>City/State(Region): </b></label>-->
+            <!--</div>-->
+            <!--<div class = "col-md-10">-->
+                <!--<input placeholder = "Ames,IA" type="text" class="form-control" id="region" ng-model="vm.region">-->
+            <!--</div>-->
+        <!--</div>-->
+        <br><br>
+
+        <button type="submit" ng-click="vm.upload()" class="imageButton button button-positive button-block">Save Info</button>
+
+    </ion-content>
+</ion-view>
