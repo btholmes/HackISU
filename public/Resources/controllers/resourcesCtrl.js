@@ -66,7 +66,7 @@
                     .then(function(data) {
                         $ionicLoadbar.hide();
                         // alert("Posted Successfully");
-                        alert(JSON.stringify(data.data));
+                        // alert(JSON.stringify(data.data));
                         // localStorage.setItem("newImage", 1);
                         var newObj = {"url":"../ItemPics/"+vm.uniqueID+".jpg","country": vm.country,"region": vm.region,"address" : vm.address,"description":vm.itemDesc,"user": email,"name":vm.itemName,"type":"itemPic"};
                         vm.resources.push(newObj);

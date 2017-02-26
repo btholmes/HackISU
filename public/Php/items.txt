@@ -10,3 +10,4 @@
 ,{"url":"..\/images\/tetra.jpeg","country":"Venezuela","region":"Coro","address":"","description":"Antibiotic","user":"cdcf@iastate.edu","name":"Tetralysal","type":"itemPic"}
 ,{"url":"..\/ItemPics\/tylenol.jpeg","country":"Venezuela","region":"Barinas","address":"","description":"Medicine","user":"cdcf@iastate.edu","name":"Tylenol","type":"itemPic"}
 ,{"url":"..\/ItemPics\/tylenol.jpeg","country":"Venezuela","region":"Barquisimeto","address":"","description":"Medicine","user":"redbull@gmail.com","name":"Tylenol","type":"itemPic"}
+,{"url":"..\/ItemPics\/11712613017477.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough Man","user":"btholmes@iastate.edu","name":"Steel Wire","type":"itemPic"}
