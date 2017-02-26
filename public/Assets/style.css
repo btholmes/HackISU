@@ -1394,8 +1394,35 @@ input:focus {
 }
 
 
+.searchContainer{
+	width: 950px;
+	position: absolute;
+	left: 23%;
+	top: 35%;
+}
+.results{
+	top: 50%;
+	position: absolute;
+	width: 950px;
+	left: 18%;
+	/*border: 1px solid black;*/
+}
 
+input::-webkit-input-placeholder { /* WebKit browsers */
+	color: black !important;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: black !important;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: black !important;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: black !important;
+}
 
-
+.text-white{
+	color:white;
+}
 
 

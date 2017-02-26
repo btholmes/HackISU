@@ -1,7 +1,7 @@
 <ion-side-menus enable-menu-with-back-views="false">
 
     <ion-side-menu-content>
-        <ion-nav-bar class="bar-positive">
+        <ion-nav-bar class="bar-dark">
             <ion-nav-back-button>
             </ion-nav-back-button>
 
@@ -19,13 +19,14 @@
     </ion-side-menu-content>
 
     <ion-side-menu side="left" class="side-menu" slide-along offset="-15">
-        <ion-header-bar class="bar-royal">
+        <ion-header-bar class="bar-stable">
             <h1 class="title">Navigation</h1>
         </ion-header-bar>
         <ion-content>
             <ul class="list">
                 <a ui-sref = "menu.resources" class="item" menu-close>Resources</a>
                 <a ui-sref="menu.map" class="item" menu-close>Map</a>
+                <a ui-sref="menu.search" class="item" menu-close>Search Item</a>
                 <a onclick="signOut()" class="item" menu-close>LogOut</a>
             </ul>
         </ion-content>
