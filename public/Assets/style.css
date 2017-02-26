@@ -13,11 +13,11 @@
 }
 
 .prettyTitle{
-	font-family: 'Tangerine', serif;
+	font-family: 'Monospaced', serif;
 	font-size: 5em;
 }
 .prettyTitle2{
-	font-family: 'Tangerine', serif;
+	font-family: 'Monospaced', serif;
 	font-size: 4em;
 	/*color: #00d3c3;*/
 }
@@ -89,16 +89,16 @@
 	border-radius: 50%;
 }
 .title {
-	font-family: 'Tangerine', serif;
+	font-family: 'Monospaced', serif;
 	font-size: 120px;
 }
 .quote {
-	 font-family: 'Tangerine', serif;
+	 font-family: 'Monospaced', serif;
      font-size: 120px;
 	color: #000;
 }
 .quoteSmall {
-	font-family: 'Tangerine', serif;
+	font-family: 'Monospaced', serif;
 	font-size: 5vw;
 	}
 .mainNavbar {
@@ -1225,7 +1225,7 @@ input:focus {
 	font-size: 100px;
 	text-align: center;
 	color: #fff;
-	font-family: 'Tangerine', serif;
+	font-family: 'Monospaced', serif;
 }
 
 .login-form {
@@ -1263,18 +1263,28 @@ input:focus {
 	height: 100%;
 	padding-top:150px;
 }
+
 .mainLogin {
-	margin: 20px auto;
+    /*visibility: block;*/
+    margin: 20px auto;
 	width: 300px;
 }
+
+.mainReg {
+    /*visibility: none;*/
+
+    margin: 20px auto;
+    width: 300px;
+}
+
 .login-screen {
 	background-color: #FFF;
 	padding: 20px;
 	border-radius: 5px;
-	font-family: Tangerine;
+	font-family: Monospaced;
 }
 .Tangerine{
-	font-family: Tangerine;
+	font-family: Monospaced;
 	font-size:4em;
 }
 .app-title {
@@ -1325,7 +1335,7 @@ input:focus {
 
 .mainLoginBtn{
 	font-size: 2em;
-	font-family:Tangerine;
+	font-family:Monospaced;
 }
 
 .btn:hover {

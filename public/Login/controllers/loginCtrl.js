@@ -18,7 +18,6 @@
         vm.Password;
         vm.User;
 
-        vm.RegPage;
         vm.regEmail;
         vm.regPassword;
         vm.regPassword2;

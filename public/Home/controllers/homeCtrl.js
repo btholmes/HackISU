@@ -27,6 +27,7 @@
         vm.currentUser;
 
 
+
         function init(){
             // vm.profileImage = "../images/gitHub.png"
             $('.mainNavbar').css("opacity", "1");
@@ -36,7 +37,11 @@
             }, 500);
 
 //            alert(firebase.auth().currentUser.email);
-            vm.currentUser = firebase.auth().currentUser.email;
+            var str = firebase.auth().currentUser.email;
+            var temp = str.split('@');
+            vm.currentUser = temp[0];
+
+
             getUserInfo();
         }
 
