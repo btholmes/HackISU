@@ -9,4 +9,5 @@
 ,{"url":"..\/ItemPics\/sugar.jpeg","country":"Venezuela","region":"Caracas","address":"","description":"Sugar","user":"redbull@gmail.com","name":"Sugar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/guitar.png","country":"Venezuela","region":"Valencia","address":"","description":"Fender","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Coro","address":"","description":"Wheat pasta","user":"b@gmail.com","name":"Pasta","type":"itemPic"}
-,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Barinas","address":"","description":"Copper Wire","user":"cdcf@iastate.edu","name":"Copper","type":"itemPic"},{"url":"..\/ItemPics\/117125205328909.jpg","country":"United States","region":"Boone IA","address":"420 S. 4th St.","description":"Steel Wire","user":"redbull@gmail.com","name":"This is NEW","type":"itemPic"}
+,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Barinas","address":"","description":"Copper Wire","user":"cdcf@iastate.edu","name":"Copper","type":"itemPic"}
+,{"url":"..\/ItemPics\/117125205328909.jpg","country":"United States","region":"Boone IA","address":"420 S. 4th St.","description":"Steel Wire","user":"redbull@gmail.com","name":"This is NEW","type":"itemPic"}
