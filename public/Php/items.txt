@@ -1,8 +1,6 @@
 {"url":"..\/ItemPics\/117125172746788.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough","user":"redbull@gmail.com","name":"Steel Wire","type":"itemPic"}
-<<<<<<< HEAD
 ,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
 ,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
-=======
 ,{"url":"..\/ItemPics\/copperWire.jpg","country":"United States","region":"Boone, IA","address":"30 S. 4th St.","description":"Electrical","user":"b@gmail.com","name":"Copper Wire","type":"itemPic"}
 ,{"url":"..\/ItemPics\/guitar.png","country":"United States","region":"Ames, IA","address":"2320 Lincoln Way","description":"Learn to play","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/pasta.jpeg","country":"United States","region":"Ames, IA","address":"400 Lincoln Way","description":"Freshly Made","user":"redbull@gmail.com","name":"Pasta","type":"itemPic"}
@@ -14,4 +12,3 @@
 ,{"url":"..\/ItemPics\/guitar.png","country":"Venezuela","region":"Valencia","address":"","description":"Fender","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Coro","address":"","description":"Wheat pasta","user":"b@gmail.com","name":"Pasta","type":"itemPic"}
 ,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Barinas","address":"","description":"Copper Wire","user":"cdcf@iastate.edu","name":"Copper","type":"itemPic"},{"url":"..\/ItemPics\/117125205328909.jpg","country":"United States","region":"Boone IA","address":"420 S. 4th St.","description":"Steel Wire","user":"redbull@gmail.com","name":"This is NEW","type":"itemPic"}
->>>>>>> c8c6a470cd19e3a58de35e741f30bc7c52f657af

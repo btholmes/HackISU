@@ -5,7 +5,6 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great"); /**'Fredericka the Great', cursive;  **/
 
 
-<<<<<<< HEAD
 /*log in*/
 
 .titleLogin {
@@ -13,7 +12,6 @@
 	display: block;
 }
 
-=======
 .prettyTitle{
 	font-family: 'Tangerine', serif;
 	font-size: 5em;
@@ -23,7 +21,6 @@
 	font-size: 4em;
 	color: #00d3c3;
 }
->>>>>>> c8c6a470cd19e3a58de35e741f30bc7c52f657af
 /*OPENING PAGE*/
 .mainList li {
 	float: left;
@@ -1161,8 +1158,7 @@ ul.tech li {
 	filter: alpha(opacity=0);
 	height:100%;
 }
-<<<<<<< HEAD
-=======
+
 
 /*LOGIN PAGE **********************/
 
@@ -1247,5 +1243,3 @@ input:focus {
 /*LOGIN PAGE END **********************/
 
 
-
->>>>>>> c8c6a470cd19e3a58de35e741f30bc7c52f657af
