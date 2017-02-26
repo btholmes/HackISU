@@ -24,6 +24,7 @@
         vm.uploadItem;
         vm.userObj = {};
 
+        vm.tempUser;
         vm.currentUser;
 
 
@@ -38,8 +39,9 @@
 
 //            alert(firebase.auth().currentUser.email);
             var str = firebase.auth().currentUser.email;
+            vm.currentUser = str;
             var temp = str.split('@');
-            vm.currentUser = temp[0];
+            vm.tempUser = temp[0];
 
 
             getUserInfo();

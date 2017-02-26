@@ -1,33 +1,6 @@
-<div style = "background: #333; overflow:scroll">
+<div style = "background: rgb(52, 152, 219); overflow:scroll">
     <br><br>
-    <h1 class = "text-center text-primary">My Resources</h1>
-    <br>
-    <hr>
-    <br>
-
-    <div style = "border-bottom: 1px solid black; word-wrap: break-word; margin-top:5px;" class = "row" ng-repeat="item in vm.resources">
-        <div class = "col-md-3">
-            <img style = "height: 100px; width: 100px; " src="{{item.url}}">
-        </div>
-        <div class = "col-md-3">
-            <b>{{item.name}}</b>
-            <p>{{item.description}}</p>
-        </div>
-        <div class = "col-md-3">
-            {{item.country}} , {{item.region}}
-        </div>
-        <div class = "col-md-3">
-            {{item.address}}
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-
-    <h1 class = "text-primary">Add Item</h1>
+    <h1 class = "text-white text-center">Add Item</h1>
     <br>
     <br>
     <div class = "row form-group">
@@ -89,10 +62,38 @@
         </div>
     </div>
     <br>
+    <br>
+    <br>
     <div class = "row">
-        <button type="submit" ng-click="vm.uploadResource()" class="imageButton button button-positive button-block">Add Item</button>
+        <button type="submit" ng-click="vm.uploadResource()" class="imageButton button button-dark button-block">Add Item</button>
     </div>
 
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h1 class = "text-center text-white">My Resources</h1>
+    <br>
+    <hr>
+    <br>
+
+    <div style = "border-bottom: 1px solid black; word-wrap: break-word; margin-top:5px;" class = "row" ng-repeat="item in vm.resources">
+        <div class = "col-md-3">
+            <img style = "height: 100px; width: 100px; " src="{{item.url}}">
+        </div>
+        <div class = "col-md-3">
+            <b>{{item.name}}</b>
+            <p>{{item.description}}</p>
+        </div>
+        <div class = "col-md-3">
+            {{item.country}} , {{item.region}}
+        </div>
+        <div class = "col-md-3">
+            {{item.address}}
+        </div>
+
+    </div>
     <br>
     <br>
 </div>
