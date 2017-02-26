@@ -47,6 +47,16 @@ angular.module("myApp", ['ui.router', 'ngAnimate', 'ionic'])
 					}
 				},
 			})
+			.state('menu.search', {
+				url: '/search',
+				views: {
+					'menuContent': {
+						templateUrl: 'Search/views/search.html',
+						controller: 'searchCtrl',
+						controllerAs: 'vm'
+					}
+				},
+			})
 		// .state('home', {
 		// 	name: 'home',
 		// 	url: '/home',
