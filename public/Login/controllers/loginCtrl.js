@@ -65,7 +65,7 @@
                            .then(function(user) {
                              console.log("Account linking success", user);
                                 // Don't go home straight from registration
-//                               $state.go("home");
+                              $state.go("home");
                            }, function(error) {
                              console.log("Account linking error", error);
                            });
