@@ -5,3 +5,8 @@
 ,{"url":"..\/ItemPics\/sudafed.jpeg","country":"United States","region":"Boone, IA","address":"10 5th St.","description":"Medicine","user":"cdcf@iastate.edu","name":"Sudafed","type":"itemPic"}
 ,{"url":"..\/ItemPics\/sugar.jpeg","country":"United States","region":"Ames, IA","address":"100 Lincoln Way","description":"Super Sweet","user":"cdcf@iastate.edu","name":"Sugar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/tylenol.jpeg","country":"United States","region":"Ames, IA","address":"275 Richardson Ct.","description":"Medicine","user":"cdcf@iastate.edu","name":"Tylenol","type":"itemPic"}
+,{"url":"..\/ItemPics\/tylenol.jpeg","country":"Venezuela","region":"Barquisimeto","address":"","description":"Medicine","user":"redbull@gmail.com","name":"Tylenol","type":"itemPic"}
+,{"url":"..\/ItemPics\/sugar.jpeg","country":"Venezuela","region":"Caracas","address":"","description":"Sugar","user":"redbull@gmail.com","name":"Sugar","type":"itemPic"}
+,{"url":"..\/ItemPics\/guitar.png","country":"Venezuela","region":"Valencia","address":"","description":"Fender","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
+,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Coro","address":"","description":"Wheat pasta","user":"b@gmail.com","name":"Pasta","type":"itemPic"}
+,{"url":"..\/ItemPics\/pasta.jpeg","country":"Venezuela","region":"Barinas","address":"","description":"Copper Wire","user":"cdcf@iastate.edu","name":"Copper","type":"itemPic"}
