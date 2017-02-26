@@ -1,6 +1,4 @@
 {"url":"..\/ItemPics\/117125172746788.jpg","country":"United States","region":"Ames, IA","address":"620 S. 4th St.","description":"Tough","user":"redbull@gmail.com","name":"Steel Wire","type":"itemPic"}
-,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
-,{"url":"..\/ItemPics\/.jpg","country":null,"region":null,"address":null,"description":null,"user":null,"name":null,"type":null}
 ,{"url":"..\/ItemPics\/copperWire.jpg","country":"United States","region":"Boone, IA","address":"30 S. 4th St.","description":"Electrical","user":"b@gmail.com","name":"Copper Wire","type":"itemPic"}
 ,{"url":"..\/ItemPics\/guitar.png","country":"United States","region":"Ames, IA","address":"2320 Lincoln Way","description":"Learn to play","user":"b@gmail.com","name":"Guitar","type":"itemPic"}
 ,{"url":"..\/ItemPics\/pasta.jpeg","country":"United States","region":"Ames, IA","address":"400 Lincoln Way","description":"Freshly Made","user":"redbull@gmail.com","name":"Pasta","type":"itemPic"}

@@ -1243,3 +1243,159 @@ input:focus {
 /*LOGIN PAGE END **********************/
 
 
+/*#login{*/
+	/*width: 1000px;*/
+	/*position: absolute;*/
+	/*left: 14%;*/
+	/*top: 30%;*/
+/*}*/
+
+
+
+
+
+
+.mainLoginBlock {
+	/*font-family: Tangerine;*/
+	/*font-size: 2em; */
+	background-color: #3498DB;
+	padding: 50px;
+	height: 100%;
+	padding-top:150px;
+}
+.mainLogin {
+	margin: 20px auto;
+	width: 300px;
+}
+.login-screen {
+	background-color: #FFF;
+	padding: 20px;
+	border-radius: 5px;
+	font-family: Tangerine;
+}
+.Tangerine{
+	font-family: Tangerine;
+	font-size:4em;
+}
+.app-title {
+	text-align: center;
+	color: #777;
+}
+
+.theLogin-form {
+	text-align: center;
+}
+.control-group {
+	margin-bottom: 10px;
+}
+
+.loginInput {
+	text-align: center;
+	background-color: #9acdc6;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 10px 0;
+	width: 100%;
+	transition: border .5s;
+}
+
+.loginInput:focus {
+	border: 2px solid #3498DB;
+	box-shadow: none;
+}
+
+.btnLogin {
+	border: 2px solid transparent;
+	background: #3498DB;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 25px;
+	padding: 10px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.mainLoginBtn{
+	font-size: 2em;
+	font-family:Tangerine;
+}
+
+.btn:hover {
+	background-color: #2980B9;
+}
+
+.login-link {
+	font-size: 12px;
+	color: #444;
+	display: block;
+	margin-top: 12px;
+}
+
+
+
+
+
+.google-button {
+	height: 40px;
+	border-width: 0;
+	background: white;
+	color: #737373;
+	border-radius: 5px;
+	white-space: nowrap;
+	box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
+	transition-property: background-color, box-shadow;
+	transition-duration: 150ms;
+	transition-timing-function: ease-in-out;
+	padding: 0;
+}
+
+.google-button:focus{
+	box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
+
+}
+.google-button:hover{
+	box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
+
+}
+.google-button:active{
+	background-color: #e5e5e5;
+	box-shadow: none;
+	transition-duration: 10ms;
+}
+
+.google-button__icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 8px 0 8px 8px;
+	width: 18px;
+	height: 18px;
+	box-sizing: border-box;
+}
+
+.google-button__icon--plus {
+	width: 27px;
+}
+
+.google-button__text {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 24px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Roboto',arial,sans-serif;
+}
+
+
+
+
+
+
+

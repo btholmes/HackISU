@@ -65,7 +65,7 @@
                            .then(function(user) {
                              console.log("Account linking success", user);
                                 // Don't go home straight from registration
-                              $state.go("home");
+                              $state.go("menu.home");
                            }, function(error) {
                              console.log("Account linking error", error);
                            });
@@ -91,10 +91,17 @@
                   var provider = new firebase.auth.GoogleAuthProvider();
                   provider.addScope('profile');
                   provider.addScope('email');
+
                   return firebase.auth().signInWithPopup(provider)
+                      .then(function(){
+                          $state.go("menu.home");
+                      })
+
                     .catch(function(error) {
+                        error = true;
                       console.log('Google sign in error', error);
                     });
+
 
         }
 
